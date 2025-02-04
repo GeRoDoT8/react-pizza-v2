@@ -2,13 +2,16 @@ import React from "react";
 
 function Sort() {
     const [open, setOpen] = React.useState(false);
-    const [selected, setSelected] = React.useState(false);
+    const [selected, setSelected] = React.useState(0); // Устанавливаем начальное значение в 0
     const list = ["популярности", "цене", "алфавиту"];
+
     const onClickListItem = (i) => {
         setSelected(i);
         setOpen(false);
     };
+
     const sortName = list[selected];
+
     return (
         <div className="sort">
             <div className="sort__label">
