@@ -7,9 +7,10 @@ import "./scss/app.scss";
 import { Routes, Route } from "react-router-dom";
 import Cart from "./pages/Cart";
 function App() {
+    const [searchValue, setSearchValue] = React.useState("");
     return (
         <div className="wrapper">
-            <Header />
+            <Header searchValue={searchValue} setSearchValue={setSearchValue}/>
             <div className="content">
                 <Routes>
                     <Route path="/" element={<Home />} />
